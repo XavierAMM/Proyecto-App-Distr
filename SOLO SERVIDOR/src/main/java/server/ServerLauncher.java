@@ -16,7 +16,7 @@ public class ServerLauncher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ServerForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ServerForm.fxml"));
         primaryStage.setScene(new Scene(loader.load()));
         primaryStage.setTitle("Servidor");
         primaryStage.setResizable(false);
