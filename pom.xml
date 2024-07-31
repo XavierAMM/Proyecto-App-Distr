@@ -53,9 +53,11 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.yourpackage.MainApp</mainClass>
+                    <mainClass>Launcher</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
+
+
