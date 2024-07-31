@@ -7,10 +7,16 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Map;
 
 public class ServerLauncher extends Application {
 
     public static void main(String[] args) {
+        // Imprimir todas las variables de entorno
+        Map<String, String> env = System.getenv();
+        for (String envName : env.keySet()) {
+            System.out.println(envName + ": " + env.get(envName));
+        }
         launch(args);
     }
 
