@@ -17,6 +17,9 @@ public class ServerLauncher extends Application {
         for (String envName : env.keySet()) {
             System.out.println(envName + ": " + env.get(envName));
         }
+
+        // Añadir un log para JAVA_HOME
+        System.out.println("JAVA_HOME: " + System.getenv("JAVA_HOME"));
         launch(args);
     }
 
