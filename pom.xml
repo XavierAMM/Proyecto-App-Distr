@@ -23,6 +23,12 @@
             <artifactId>javafx-controls</artifactId>
             <version>22.0.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>openjfx-monocle</artifactId>
+            <version>8u76-b04</version>
+        </dependency>
     </dependencies>
 
     <properties>
