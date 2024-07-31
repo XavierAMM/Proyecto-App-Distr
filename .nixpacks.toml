@@ -1,9 +1,14 @@
+[phases.setup]
+commands = [
+    "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk"
+]
+
 [phases.build]
 commands = [
-    "mvn -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
+    "mvn -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean package"
 ]
 
 [phases.start]
 commands = [
-    "java --module-path /usr/lib/jvm/java-11-openjdk-amd64/lib --add-modules javafx.controls,javafx.fxml -jar target/Proyecto-1.0-SNAPSHOT.jar"
+    "web: java --module-path \usr\lib\jvm\java-11-openjdk-amd64\lib --add-modules javafx.controls,javafx.fxml -jar target\Proyecto-1.0-SNAPSHOT.jar"
 ]
