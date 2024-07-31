@@ -18,7 +18,7 @@ public class Server {
     private List<ClientHandler> clients = new ArrayList<>();
 
     private Server() throws IOException {
-        serverSocket = new ServerSocket(3000);
+        serverSocket = new ServerSocket(3001);
     }
 
     public static Server getInstance() throws IOException {
