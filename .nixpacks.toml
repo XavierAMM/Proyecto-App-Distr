@@ -1,17 +1,9 @@
-[variables]
-JAVA_HOME = "/usr/lib/jvm/java-11-openjdk-amd64"
-
-[phases.setup]
-commands = [
-    "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
-]
-
 [phases.build]
 commands = [
-    "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && mvn -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
+    "mvn -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
 ]
 
 [phases.start]
 commands = [
-    "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && java --module-path $JAVA_HOME/lib --add-modules javafx.controls,javafx.fxml -jar target/Proyecto-1.0-SNAPSHOT.jar"
+    "java --module-path /usr/lib/jvm/java-11-openjdk-amd64/lib --add-modules javafx.controls,javafx.fxml -jar target/Proyecto-1.0-SNAPSHOT.jar"
 ]
