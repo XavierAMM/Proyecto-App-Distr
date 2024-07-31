@@ -37,9 +37,10 @@
             </goals>
             <configuration>
               <transformers>
-                <transformer />
+                <transformer>
+                  <mainClass>server.ServerLauncher</mainClass>
+                </transformer>
               </transformers>
-              <mainClass>server.ServerLauncher</mainClass>
             </configuration>
           </execution>
         </executions>
